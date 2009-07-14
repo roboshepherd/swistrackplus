@@ -47,11 +47,6 @@ void THISCLASS::OnReloadConfiguration() {
         mBgImage = mCore->mDataStructureImageGray.mImage;
     }
 
-    // Check Robot Devices exist
-//    printf("Checking RIL robot list: \n");
-//    for(int i=0; i< MAXROBOT; i++){
-//      printf("Robot %s ID: %d \n", RILROBOTLIST[i], atoi(RILROBOTLIST[i]));
-//    }
 
     if(!CheckRobotDevices()){
          //parse/set robot devics parameters
@@ -72,11 +67,9 @@ void THISCLASS::OnStep() {
     // Check Camera input
     OnReloadConfiguration();
     //CheckBgImage();
-    printf("Step count: %d \n", mStepCount);
-
+    //printf("Step count: %d \n", mStepCount);
 
     // state checkout
-    //CheckoutStates(RILROBOTLIST);
     UpdateRobotPoses();
     CommitPoseMessages(RILROBOTLIST);
 
