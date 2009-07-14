@@ -1,0 +1,12 @@
+Calibration error
+Max error in X: 	5105
+Max error in Y: 	2245
+Average error in X: 	2603
+Average error in Y: 	1388.5
+Max distance error: 	5269.9
+Average distance error: 	3110.5
+Camera matrix: 
+	x = a11 u + a12 v + a13 + a14 u^2 + a15 v^2 + a16 uv
+	y = a21 u + a22 v + a23 + a24 u^2 + a25 v^2 + a26 uv
+	3.17484	-0.942524	354.734	-0.000295504	0.000311991	1.79339e-05
+	-0.413223	1.28852	189.778	-5.76645e-05	-7.75835e-06	1.48054e-05

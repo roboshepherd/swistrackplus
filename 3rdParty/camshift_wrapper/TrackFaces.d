@@ -1,0 +1,5 @@
+TrackFaces.o: TrackFaces.c /usr/include/opencv/cv.h \
+  /usr/include/opencv/cxcore.h /usr/include/opencv/cxtypes.h \
+  /usr/include/opencv/cxerror.h /usr/include/opencv/cvver.h \
+  /usr/include/opencv/cvtypes.h /usr/include/opencv/cvcompat.h \
+  /usr/include/opencv/highgui.h capture.h facedet.h camshift_wrapper.h

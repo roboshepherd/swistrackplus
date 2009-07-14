@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<swistrackcomponent>
+	<friendlyname>Output to AVI File</friendlyname>
+	<description>Write an AVI file.</description>
+	<url>http://en.wikibooks.org/wiki/SwisTrack/Components/OutputFileAvi</url>
+	<displayimage>Output</displayimage>
+
+	<configuration>
+		<parameter type="double">
+			<name>FrameRate</name>
+			<label>Frame Rate</label>
+			<default>0.1</default>
+			<reloadable>false</reloadable>
+		</parameter>
+		<parameter type="dropdownlist">
+			<name>InputImage</name>
+			<label>Input Image</label>
+			<items>
+				<item key="0">Gray</item>
+				<item key="1">Color</item>
+				<item key="2">Binary</item>
+			</items>
+			<default>0</default>
+			<reloadable>true</reloadable>
+		</parameter>
+		<title>Frame Buffering</title>
+		<parameter type="integer">
+			<name>FrameBufferCount</name>
+			<label>Buffer Frames</label>
+			<min>1</min>
+			<max>1000</max>
+			<default>1</default>
+			<reloadable>false</reloadable>
+		</parameter>
+		<label>The frames will be kept in memory and written only after having collected that number of frames (or when resetting). This is useful for high-speed acquisition/recording of short sequences.</label>
+	</configuration>
+</swistrackcomponent>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<swistrackcomponent>
+	<friendlyname>RIL Global Mode Expt</friendlyname>
+	<description>manages global mode expt  </description>
+	<url>unset</url>
+	<displayimage>Output</displayimage>
+	<configuration>
+
+	</configuration>
+</swistrackcomponent>

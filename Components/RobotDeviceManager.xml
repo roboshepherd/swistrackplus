@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<swistrackcomponent>
+	<friendlyname>Robot Device Manager</friendlyname>
+	<description>manages robot  </description>
+	<url>unset</url>
+	<displayimage>Output</displayimage>
+	<configuration>
+
+	</configuration>
+</swistrackcomponent>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="../Code/batch/Application.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="56" topLine="0" />
+	</File>
+	<File name="../Code/batch/Application.h" open="0" top="0" tabpos="0">
+		<Cursor position="74" topLine="0" />
+	</File>
+	<File name="../Code/core/ComponentBackgroundSubtractionGray.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2474" topLine="66" />
+	</File>
+	<File name="../Code/core/ComponentBinaryMask.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="72" />
+	</File>
+	<File name="../Code/core/ComponentBinaryMask.h" open="0" top="0" tabpos="0">
+		<Cursor position="564" topLine="15" />
+	</File>
+	<File name="../Code/core/ComponentBlobDetectionMinMax.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="0" topLine="44" />
+	</File>
+	<File name="../Code/core/ComponentBlobDetectionMinMax.h" open="0" top="0" tabpos="0">
+		<Cursor position="697" topLine="20" />
+	</File>
+	<File name="../Code/core/ComponentConvertBayerToColor.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1734" topLine="60" />
+	</File>
+	<File name="../Code/core/ComponentConvertToGray.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2627" topLine="70" />
+	</File>
+	<File name="../Code/core/ComponentIDReaderRing.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="6528" topLine="197" />
+	</File>
+	<File name="../Code/core/ComponentInputCameraGigE.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="10785" topLine="314" />
+	</File>
+	<File name="../Code/core/ComponentInputCameraGigE.h" open="0" top="0" tabpos="0">
+		<Cursor position="6913" topLine="151" />
+	</File>
+	<File name="../Code/core/ComponentInputShopFloorLayout.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="135" />
+	</File>
+	<File name="../Code/core/ComponentInputShopFloorLayout.h" open="0" top="0" tabpos="1">
+		<Cursor position="152" topLine="0" />
+	</File>
+	<File name="../Code/core/ComponentOutputFile.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1489" topLine="39" />
+	</File>
+	<File name="../Code/core/ComponentOutputFile.h" open="0" top="0" tabpos="0">
+		<Cursor position="71" topLine="0" />
+	</File>
+	<File name="../Code/core/ComponentOutputParticles.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="972" topLine="24" />
+	</File>
+	<File name="../Code/core/ComponentOutputParticles.h" open="0" top="0" tabpos="6">
+		<Cursor position="481" topLine="0" />
+	</File>
+	<File name="../Code/core/ComponentRILGlobalModeExpt.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="10131" topLine="366" />
+	</File>
+	<File name="../Code/core/ComponentRILGlobalModeExpt.h" open="1" top="0" tabpos="2">
+		<Cursor position="234" topLine="0" />
+	</File>
+	<File name="../Code/core/ComponentRobotDeviceManager.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="2289" topLine="181" />
+	</File>
+	<File name="../Code/core/ComponentRobotDeviceManager.h" open="0" top="0" tabpos="2">
+		<Cursor position="1006" topLine="44" />
+	</File>
+	<File name="../Code/core/ComponentRobotTaskAllocator.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="5976" topLine="80" />
+	</File>
+	<File name="../Code/core/ComponentRobotTaskAllocator.h" open="0" top="0" tabpos="10">
+		<Cursor position="1856" topLine="18" />
+	</File>
+	<File name="../Code/core/ComponentSimulationParticles.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="119" topLine="0" />
+	</File>
+	<File name="../Code/core/ComponentSimulationParticles.h" open="0" top="0" tabpos="0">
+		<Cursor position="92" topLine="0" />
+	</File>
+	<File name="../Code/core/ComponentTrigger.h" open="0" top="0" tabpos="0">
+		<Cursor position="117" topLine="5" />
+	</File>
+	<File name="../Code/core/DataStructureInputShopFloor.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="41" topLine="0" />
+	</File>
+	<File name="../Code/core/DataStructureInputShopFloor.h" open="0" top="0" tabpos="4">
+		<Cursor position="1043" topLine="14" />
+	</File>
+	<File name="../Code/core/DataStructureRobotDevices.h" open="0" top="0" tabpos="15">
+		<Cursor position="82" topLine="0" />
+	</File>
+	<File name="../Code/core/DataStructureShopTasks.h" open="0" top="0" tabpos="16">
+		<Cursor position="161" topLine="0" />
+	</File>
+	<File name="../Code/core/DisplayRenderer.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="113" topLine="0" />
+	</File>
+	<File name="../Code/core/DisplayRenderer.h" open="1" top="0" tabpos="13">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Code/core/LiveGraphDataWriter.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="2141" topLine="60" />
+	</File>
+	<File name="../Code/core/LiveGraphDataWriter.h" open="1" top="0" tabpos="7">
+		<Cursor position="197" topLine="0" />
+	</File>
+	<File name="../Code/core/Particle.h" open="0" top="0" tabpos="0">
+		<Cursor position="851" topLine="8" />
+	</File>
+	<File name="../Code/core/RILSetup.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="22" topLine="0" />
+	</File>
+	<File name="../Code/core/RILSetup.h" open="0" top="0" tabpos="12">
+		<Cursor position="797" topLine="33" />
+	</File>
+	<File name="../Code/core/Random.h" open="0" top="0" tabpos="16">
+		<Cursor position="1112" topLine="29" />
+	</File>
+	<File name="../Code/core/RobotDevice.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="194" topLine="0" />
+	</File>
+	<File name="../Code/core/RobotDevice.h" open="1" top="0" tabpos="4">
+		<Cursor position="455" topLine="63" />
+	</File>
+	<File name="../Code/core/RobotTaskSelector.cpp" open="0" top="0" tabpos="14">
+		<Cursor position="1936" topLine="0" />
+	</File>
+	<File name="../Code/core/RobotTaskSelector.h" open="0" top="0" tabpos="13">
+		<Cursor position="553" topLine="9" />
+	</File>
+	<File name="../Code/core/SHMConfig.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="12597" topLine="45" />
+	</File>
+	<File name="../Code/core/SHMConfig.h" open="0" top="0" tabpos="4">
+		<Cursor position="1461" topLine="34" />
+	</File>
+	<File name="../Code/core/ShopTask.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="481" topLine="11" />
+	</File>
+	<File name="../Code/core/ShopTask.h" open="1" top="0" tabpos="9">
+		<Cursor position="709" topLine="11" />
+	</File>
+	<File name="../Code/core/SwisTrackCore.cpp" open="0" top="0" tabpos="17">
+		<Cursor position="9778" topLine="160" />
+	</File>
+	<File name="../Code/core/SwisTrackCore.h" open="0" top="0" tabpos="9">
+		<Cursor position="3267" topLine="0" />
+	</File>
+	<File name="../Code/core/Utility.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="20" topLine="6" />
+	</File>
+	<File name="../Code/core/Utility.h" open="1" top="0" tabpos="11">
+		<Cursor position="228" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
