@@ -89,7 +89,7 @@ void THISCLASS::OnReloadConfiguration() {
 void THISCLASS::OnStep() {
   // increase counter
   mStepCount++;
-  printf("============\n Step count: [%ld] =========\n", mStepCount);
+  printf("\n============ Step count: [%ld] =========\n", mStepCount);
 
   // Check reloadable settings
   OnReloadConfiguration();
@@ -109,6 +109,9 @@ void THISCLASS::OnStep() {
   LogLiveTaskInfo();
   LogLiveRobotDeviceStates();
 
+  // impose tasks as circles on image
+  DrawShopTasks(TASKS_CENTERS);
+
 	// Set the display
 	DisplayEditor de(&mDisplayOutput);
 	if (de.IsActive()) {
@@ -118,6 +121,8 @@ void THISCLASS::OnStep() {
 
 	 printf("============End Step =========\n");
 }
+
+
 
 void THISCLASS::OnStepCleanup() {
     //reset state
@@ -174,7 +179,17 @@ void THISCLASS::CreateShopTasks(int count, int matcount,\
 
  }
 
- void THISCLASS::AddTaskBroadcast(int& id, CvPoint2D32f& center, double& urgency)
+void THISCLASS::DrawShopTasks(float taskcenter[][XY])
+{
+  if (mBgImage && (!mShopTasks.empty())) {
+    for (int i =0; i< MAXSHOPTASK; i++){
+        CvPoint center = cvPoint(taskcenter[i][0], taskcenter[i][1]);
+        cvCircle(mBgImage, center, TASK_RADIUS, CV_RGB(255, 0,0), 3);
+    }
+  }
+}
+
+void THISCLASS::AddTaskBroadcast(int& id, CvPoint2D32f& center, double& urgency)
  {
    mTaskBroadcast.id =  id;
    mTaskBroadcast.center.x = center.x;
@@ -295,7 +310,7 @@ void THISCLASS::UpdateShopTasks(int taskcount, int robotcount)
 	    }
 	    // update this shoptask
       q->at(i).StepUpdate(mStepCount, workercount);
-      printf("   UpdateShopTasks: task %d workers: %d  \n", i, workercount);
+      //printf("   UpdateShopTasks: task %d workers: %d  \n", i, workercount);
     }
   }
 }

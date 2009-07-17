@@ -82,6 +82,9 @@ public:
   //! Write robot devices states
   void LogLiveRobotDeviceStates();
 
+  //! Draw Tasks
+  void DrawShopTasks(float taskcenter[][XY]);
+
 private:
   //flags
   bool mShopTasksFound;

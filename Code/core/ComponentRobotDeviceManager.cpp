@@ -155,12 +155,12 @@ void THISCLASS::UpdateRobotPoses(){
       return;
     }
     for(int i = 0; i < r->size(); i++){
-      printf("  Updating Robot %d \n", r->at(i).mID);
+      //printf("  Updating Robot %d \n", r->at(i).mID);
       DataStructureParticles::tParticleVector::iterator it = p->begin();
       while (it != p->end()){
         //printf("  Particle %d pose available \n", it->mID );
         if(it->mID == r->at(i).mID){ // ID compare
-          printf(" +++ Copied pose from particle %d to robot %d \n", it->mID, r->at(i).mID);
+          //printf(" +++ Copied pose from particle %d to robot %d \n", it->mID, r->at(i).mID);
           r->at(i).mPose.center.x = it->mCenter.x;
           r->at(i).mPose.center.y = it->mCenter.y;
           r->at(i).mPose.orient = it->mOrientation;

@@ -27,37 +27,9 @@
 #define INIT_LEARN_RATE 1
 #define INIT_FORGET_RATE 0.16
 
-
-// Names of SHM objects
-//static const char* RILROBOTLIST[] = {
-//  EPUCK1246,
-//  EPUCK1250,
-//  EPUCK1253,
-//  EPUCK1259,
-//  EPUCK1260,
-//  EPUCK1265,
-//  EPUCK1271,
-//  EPUCK1302
-//};
-
-
-
-
-
-//// fake
-//static float TASKS_START[MAXSHOPTASK][XY] = {
-//    {100, 500}, // task 1 start point
-//    {700, 100},
-//    {1500, 500}
-//};
-//
-//static float TASKS_END[MAXSHOPTASK][XY] = {
-//    {400, 800}, // task 1 end point
-//    {1200, 300},
-//    {1800, 700}
-//};
-//
-//static float STORE_LOCATION[XY] = {800, 1600};
-//
+// for navigation
+#define TASK_RADIUS 100 //pixel
+#define TASK_CONE_ANGLE 0.26 // 15deg
+#define MAX_NAV_STEP 100 // how long navigation continues
 
 #endif

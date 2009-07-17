@@ -171,8 +171,9 @@ bool THISCLASS::DrawParticles(ErrorList *errors) {
 		float s = sinf(it->mOrientation) * 8; //sinf(it->mOrientation/57.29577951)*20;
 		cvLine(mImage, cvPoint(x, y), cvPoint(x + (int)floorf(c + 0.5), y + (int)floorf(s + 0.5)), cvScalar(192, 0, 0), 1);
 
-		wxString label = wxString::Format(wxT("%d [%.0f,%.0f,%.2f]"),\
-		 it->mID, it->mCenter.x, it->mCenter.y, it->mOrientation);
+//		wxString label = wxString::Format(wxT("%d [%.0f,%.0f,%.2f]"),\
+//		 it->mID, it->mCenter.x, it->mCenter.y, it->mOrientation);
+    wxString label = wxString::Format(wxT("%d"), it->mID);
 		cvPutText(mImage, label.mb_str(wxConvISO8859_1), cvPoint(x + 12, y + 10), &mFontMain, cvScalar(255, 0, 0));
 		it++;
 	}
