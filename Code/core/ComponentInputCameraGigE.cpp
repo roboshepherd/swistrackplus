@@ -632,7 +632,7 @@ void THISCLASS::OnStep() {
 	if(!mColor){
     	//mCore->mDataStructureInput.mImage = mBayerImage; //RAW bayer8 output, blob detection takes long time
     	mCore->mDataStructureInput.mImage = mGrayImage; // Clean Gray output, fast blob detetcion
-		//mCore->mDataStructureImageGray.mImage = mGrayImage; //optional, for direct output
+      //mCore->mDataStructureImageGray.mImage = mGrayImage; //optional, for direct output
 	} else { // In case we only need color image
 		//mCore->mDataStructureInput.mImage = mBayerImage; //RAW bayer8 output
 		mCore->mDataStructureInput.mImage = mColorImage; // Clean Color output, need to filter by other component

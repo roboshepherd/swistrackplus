@@ -26,7 +26,7 @@ THISCLASS::~ComponentOutputFileAVI() {
 void THISCLASS::OnStart() {
 	wxString filename_string = GetConfigurationString(wxT("FileTitle"), wxT(""));
 	mFileName=mCore->GetRunFileName(filename_string);
-	mFrameRate = GetConfigurationInt(wxT("FrameRate"), 15);
+	mFrameRate = GetConfigurationInt(wxT("FrameRate"), 1);
 	BufferedFrames_Allocate(GetConfigurationInt(wxT("FrameBufferCount"), 1));
 	codecString = GetConfigurationString(wxT("Codec"), wxT("Def."));
 	OnReloadConfiguration();
@@ -71,18 +71,19 @@ void THISCLASS::OnStep() {
 
 	// Create the Writer
 	if (! mWriter) {
-		if (inputimage->nChannels == 3) {	
+		if (inputimage->nChannels == 3) {
 			wxString toto=mFileName.GetFullPath();
-			mWriter = cvCreateVideoWriter(mFileName.GetFullPath().mb_str(wxConvFile), codecValue, mFrameRate, cvGetSize(inputimage));			
+			mWriter = cvCreateVideoWriter(mFileName.GetFullPath().mb_str(wxConvFile),  CV_FOURCC('M','J','P','G'), mFrameRate, cvGetSize(inputimage));
 		} else if (inputimage->nChannels == 1) {
-			mWriter = cvCreateVideoWriter(mFileName.GetFullPath().mb_str(wxConvFile), codecValue, mFrameRate, cvGetSize(inputimage), 0);
+			//mWriter = cvCreateVideoWriter(mFileName.GetFullPath().mb_str(wxConvFile),  CV_FOURCC('X','V','I','D'), mFrameRate, cvGetSize(inputimage), 0);
+			mWriter = cvCreateVideoWriter("out.avi",  CV_FOURCC('D','I','V','3'), 3.0, cvGetSize(inputimage), 0);
 		} else {
 			AddError(wxT("Input image must have 1 or 3 channels"));
 			return;
 		}
 
 		if (! mWriter) {
-			AddError(wxT("Error while creating the AVI file."));
+			AddError(wxT("OFS Error while creating the AVI file."));
 			return;
 		}
 	}

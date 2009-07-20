@@ -406,7 +406,7 @@ void THISCLASS::LogLiveTaskInfo()
   //append urgency
   while(it != p->end()){
     u = Utility::Trunc(it->mUrgency, 3);
-    s2 = wxString::Format(wxT("%.2f"), it->mUrgency);
+    s2 = wxString::Format(wxT("%f"), it->mUrgency);
     data.append(sep);
     data.append(s2);
     it++;

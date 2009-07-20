@@ -6,6 +6,13 @@
 	<displayimage>Output</displayimage>
 
 	<configuration>
+		<parameter type="string">
+			<name>FileTitle</name>
+			<label>File name</label>
+			<default>output.avi</default>
+			<reloadable>false</reloadable>
+		</parameter>
+		
 		<parameter type="double">
 			<name>FrameRate</name>
 			<label>Frame Rate</label>
@@ -23,6 +30,19 @@
 			<default>0</default>
 			<reloadable>true</reloadable>
 		</parameter>
+		<parameter type="dropdownlist">
+			<name>Codec</name>
+			<label>Input Image</label>
+			<items>
+				<item key="0">Def.</item>
+				<item key="1">DIB</item>
+				<item key="2">IYUV</item>
+			</items>
+			<default>0</default>
+			<reloadable>false</reloadable>
+		</parameter>
+		
+		
 		<title>Frame Buffering</title>
 		<parameter type="integer">
 			<name>FrameBufferCount</name>
