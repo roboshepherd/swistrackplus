@@ -2,4 +2,5 @@
 *.d
 *.a
 SwisTrackEnvironment/SwisTrack
-testing/
+testing/*
+testing/nmea

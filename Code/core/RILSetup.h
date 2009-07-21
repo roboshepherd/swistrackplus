@@ -18,7 +18,7 @@
 //RIL and AFM params
 #define MAXSHOPTASK 3
 #define INIT_URGENCY 0.5
-#define DLETA_URGENCY 0.001
+#define DLETA_URGENCY 0.01
 #define INIT_MATERIAL_COUNT 10
 #define XY 2 // for task coordinates
 
@@ -30,6 +30,6 @@
 // for navigation
 #define TASK_RADIUS 100 //pixel
 #define TASK_CONE_ANGLE 0.26 // 15deg
-#define MAX_NAV_STEP 100 // how long navigation continues
+#define MAX_NAV_STEP 1 // how long navigation continues
 
 #endif

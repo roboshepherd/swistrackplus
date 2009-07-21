@@ -3,10 +3,10 @@
   <components>
     <component type="InputCameraGigE">
       <enabledinterval value="1"/>
-      <parameter name="AOIOffset.x" value="636"/>
+      <parameter name="AOIOffset.x" value="800"/>
       <parameter name="AOIOffset.y" value="0"/>
-      <parameter name="AOISize.x" value="3600"/>
-      <parameter name="AOISize.y" value="3248"/>
+      <parameter name="AOISize.x" value="1600"/>
+      <parameter name="AOISize.y" value="1024"/>
       <parameter name="AnalogGain" value="3"/>
       <parameter name="Color" value="false"/>
       <parameter name="ExposureMode" value="0"/>
@@ -40,13 +40,6 @@
       <parameter name="ObjectListFileName" value="/home/newport-ril/swisTrack/swistrack/code/Make/Components/robotlist-20series.xml"/>
       <parameter name="RingRadiusInner" value="16.000000"/>
       <parameter name="RingRadiusOuter" value="39.000000"/>
-    </component>
-    <component type="OutputFileAVI">
-      <enabledinterval value="1"/>
-      <parameter name="Codec" value="2"/>
-      <parameter name="FileTitle" value="output.avi"/>
-      <parameter name="FrameRate" value="1.000000"/>
-      <parameter name="InputImage" value="0"/>
     </component>
   </components>
   <server>
