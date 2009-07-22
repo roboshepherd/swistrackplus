@@ -18,7 +18,7 @@
 //RIL and AFM params
 #define MAXSHOPTASK 3
 #define INIT_URGENCY 0.5
-#define DLETA_URGENCY 0.01
+#define DLETA_URGENCY 0.1
 #define INIT_MATERIAL_COUNT 10
 #define XY 2 // for task coordinates
 
