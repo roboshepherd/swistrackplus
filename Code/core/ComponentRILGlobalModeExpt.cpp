@@ -23,7 +23,6 @@ THISCLASS::ComponentRILGlobalModeExpt(SwisTrackCore *stc):
 		mBgImage(0),
     mMaterialCount(0),
     mTaskUrgency(INIT_URGENCY),
-    mDeltaUrgency(DLETA_URGENCY),
     mStartPoint(),
     mEndPoint(),
 		mStepCount(0),
@@ -69,8 +68,8 @@ void THISCLASS::OnReloadConfiguration() {
 //        mMaterialCount = 10; // TODO: parse
 //        mTaskUrgency = 1.0;
 //        mDeltaUrgency = 0.1;
-        CreateShopTasks(MAXSHOPTASK, mMaterialCount,\
-         mTaskUrgency, mDeltaUrgency);
+        CreateShopTasks(MAXSHOPTASK, INIT_MATERIAL_COUNT, INIT_URGENCY,
+        DELTA_URGENCY_INC);
     }
 
     // Check Robot devices
@@ -284,7 +283,7 @@ void THISCLASS::CheckoutStateMessages(const char * robotlist[])
          p->at(i).mStateStep = msg.step;
          update++;
       } else { // no update done, device lost or reset
-         p->at(i).mState = RobotDevice::NOTSET;
+         //p->at(i).mState = RobotDevice::NOTSET;
          noupdate++;
       }
 

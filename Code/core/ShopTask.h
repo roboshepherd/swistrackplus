@@ -19,7 +19,7 @@ public:
 	int mMaterialCount;         //! Total material units available
 
 	double mUrgency;        //!< Task urgency[0~1], emergency cases it would be 1
-	double mDeltaUrgency;   //!< Change of task urgency in each step
+	//double mDeltaUrgency;   //!< Change of task urgency in each step
 
   CvPoint2D32f mCenter;     //!< Location end point in same diagonal
   CvPoint mStartPoint;     //!< Location start point in one diagonal
@@ -30,10 +30,9 @@ public:
 
 	//! Constructor.
 	ShopTask(): mID(-1), mMaterialCount(0),mUrgency(INIT_URGENCY),\
-	 mDeltaUrgency(DLETA_URGENCY), mStartPoint(), mEndPoint(),\
-	 mWorkers(), mStepCount() {}
+    mCenter(), mStartPoint(), mEndPoint(), mWorkers(), mStepCount(0) {}
 	//! Destructor.
-	~ShopTask() {}
+  ~ShopTask(){}
 
 	// methods
 	void SetDefaults(int id, int matcount, float urgency,\

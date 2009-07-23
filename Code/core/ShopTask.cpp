@@ -7,7 +7,6 @@ void THISCLASS::SetDefaults(int i, int matcount, float urgency,\
     mID = i;
     mMaterialCount = matcount;
     mUrgency = urgency;
-    mDeltaUrgency = deltaurgency;
 }
 
 void THISCLASS::SetLocation(CvPoint start, CvPoint end)
@@ -29,14 +28,14 @@ void THISCLASS::StepUpdate(long stepnum, int workercount){
   mWorkers = workercount;
 
   // update urgency based on the worker count
-  if(workercount == 0){
-    mUrgency += mDeltaUrgency;
+  if(mWorkers == 0){
+    mUrgency += DELTA_URGENCY_INC;
   } else {
-    mUrgency -= mDeltaUrgency;
+    mUrgency -= (DELTA_URGENCY_DEC * mWorkers);
   }
   // keep it within 0 to 1
 
-  mUrgency = (mUrgency < 0 ) ? 0 : mUrgency ;
+  mUrgency = (mUrgency < 0 ) ? DELTA_URGENCY_INC : mUrgency ;
   mUrgency = (mUrgency > 1.0 ) ? 1.0 : mUrgency ;
 
   // TEST later

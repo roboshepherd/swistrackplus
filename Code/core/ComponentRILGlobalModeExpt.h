@@ -104,7 +104,6 @@ private:
   //Task parameters parsing
   int mMaterialCount;
   float mTaskUrgency;
-  float mDeltaUrgency;
   CvPoint mStartPoint;     //!< Location start point in one diagonal
   CvPoint mEndPoint;     //!< Location end point in same diagonal
 
