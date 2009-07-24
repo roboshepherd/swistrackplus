@@ -33,6 +33,7 @@ THISCLASS::ComponentRILGlobalModeExpt(SwisTrackCore *stc):
     mRobotDeviceStateWriter(),
 		mDisplayOutput(wxT("Output"), wxT("After Global Mode Expt")) {
 
+  cvInitFont(&mFontMain, CV_FONT_HERSHEY_COMPLEX, 1.5, 1.5, 0, 3, 8);
 	// Data structure relations
 	mCategory = &(mCore->mCategoryOutput);
 	AddDataStructureRead(&(mCore->mDataStructureImageGray));
@@ -184,6 +185,8 @@ void THISCLASS::DrawShopTasks(float taskcenter[][XY])
     for (int i =0; i< MAXSHOPTASK; i++){
         CvPoint center = cvPoint(taskcenter[i][0], taskcenter[i][1]);
         cvCircle(mBgImage, center, TASK_RADIUS, CV_RGB(255, 0,0), 3);
+        wxString label = wxString::Format(wxT("T%d"), i);
+        cvPutText(mBgImage, label.mb_str(wxConvISO8859_1), center, &mFontMain, cvScalar(0, 0, 0));
     }
   }
 }

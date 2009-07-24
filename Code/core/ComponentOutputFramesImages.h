@@ -30,11 +30,14 @@ public:
 		return new ComponentOutputFramesImages(mCore);
 	}
 
+  void DrawParticles(Display *mDisplay, IplImage* mImage);
+
 private:
 	int mInputSelection;				//!< (configuration) Selects the input channel.
 	wxFileName mFileName;				//!< (configuration) directory and filename prefix
 	eFileType mFileType;				//!< (configuration) directory and filename prefix
 	Display mDisplayOutput;				//!< The DisplayImage showing the output of this component.
+	CvFont mFontMain;
 };
 
 #endif

@@ -48,7 +48,7 @@
       <enabledinterval value="1"/>
     </component>
     <component type="OutputFramesImages">
-      <enabledinterval value="0"/>
+      <enabledinterval value="1"/>
     </component>
   </components>
   <server>

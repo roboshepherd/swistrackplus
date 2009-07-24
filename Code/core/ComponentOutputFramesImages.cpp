@@ -12,6 +12,9 @@ THISCLASS::ComponentOutputFramesImages(SwisTrackCore *stc):
 		mInputSelection(0),
 		mDisplayOutput(wxT("Output"), wxT("FramesImages: Unprocessed Frame")) {
 
+  //Font stuff
+  cvInitFont(&mFontMain, CV_FONT_HERSHEY_COMPLEX, 1.5, 1.5, 0, 3, 8);
+
 	// Data structure relations
 	mCategory = &(mCore->mCategoryOutput);
 	AddDisplay(&mDisplayOutput);
@@ -75,10 +78,8 @@ void THISCLASS::OnStep() {
 	case 2:
 		fileExtension = ".jpeg";
 	}
-	std::ostringstream filename_oss;
-	filename_oss << mFileName.GetFullPath().mb_str(wxConvFile) << "-" << std::setw(8) << std::setfill('0') << mCore->GetStepCounter() << fileExtension;
-	cvSaveImage(filename_oss.str().c_str(), inputimage );
-	
+
+
 	// Image is always top down in Swistrack
 	inputimage->origin = 0;
 
@@ -86,6 +87,35 @@ void THISCLASS::OnStep() {
 	DisplayEditor de(&mDisplayOutput);
 	if (de.IsActive()) {
 		de.SetMainImage(inputimage);
+		de.SetParticles(mCore->mDataStructureParticles.mParticles);
+	}
+  // paint particle id's in input image
+  DrawParticles(&mDisplayOutput, inputimage);
+  // save it
+  std::ostringstream filename_oss;
+	filename_oss << mFileName.GetFullPath().mb_str(wxConvFile) << "-" << std::setw(8) << std::setfill('0') << mCore->GetStepCounter() << fileExtension;
+	cvSaveImage(filename_oss.str().c_str(), inputimage );
+}
+
+void THISCLASS::DrawParticles(Display *mDisplay, IplImage* mImage )
+{
+  float mScalingFactor = 1.0;
+  // Draw particles
+	DataStructureParticles::tParticleVector::iterator it = mDisplay->mParticles.begin();
+	while (it != mDisplay->mParticles.end()) {
+		int x = (int)floor(it->mCenter.x * mScalingFactor + 0.5);
+		int y = (int)floor(it->mCenter.y * mScalingFactor + 0.5);
+		cvRectangle(mImage, cvPoint(x - 2, y - 2), cvPoint(x + 2, y + 2), cvScalar(192, 0, 0), 1);
+
+		float c = cosf(it->mOrientation) * 8; //cosf(it->mOrientation/57.29577951)*20; // TODO: mOrientation contains an angle (rad), and the appropriate conversion to rad should be done when filling this structure
+		float s = sinf(it->mOrientation) * 8; //sinf(it->mOrientation/57.29577951)*20;
+		cvLine(mImage, cvPoint(x, y), cvPoint(x + (int)floorf(c + 0.5), y + (int)floorf(s + 0.5)), cvScalar(192, 0, 0), 1);
+
+//		wxString label = wxString::Format(wxT("%d [%.0f,%.0f,%.2f]"),\
+//		 it->mID, it->mCenter.x, it->mCenter.y, it->mOrientation);
+    wxString label = wxString::Format(wxT("%d"), it->mID);
+		cvPutText(mImage, label.mb_str(wxConvISO8859_1), cvPoint(x + 35, y - 35 ), &mFontMain, cvScalar(0, 0, 0));
+		it++;
 	}
 }
 

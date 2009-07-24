@@ -118,6 +118,7 @@ private:
   LiveGraphDataWriter mRobotDeviceStateWriter;
 
   Display mDisplayOutput;		//!< The DisplayImage showing the output of this component.
+  CvFont mFontMain;
 };
 
 #endif
