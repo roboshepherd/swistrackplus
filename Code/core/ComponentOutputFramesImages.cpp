@@ -80,6 +80,11 @@ void THISCLASS::OnStep() {
 	}
 
 
+    // save it
+  std::ostringstream filename_oss;
+	filename_oss << mFileName.GetFullPath().mb_str(wxConvFile) << "-" << std::setw(8) << std::setfill('0') << mCore->GetStepCounter() << fileExtension;
+	cvSaveImage(filename_oss.str().c_str(), inputimage );
+
 	// Image is always top down in Swistrack
 	inputimage->origin = 0;
 
@@ -87,14 +92,11 @@ void THISCLASS::OnStep() {
 	DisplayEditor de(&mDisplayOutput);
 	if (de.IsActive()) {
 		de.SetMainImage(inputimage);
-		de.SetParticles(mCore->mDataStructureParticles.mParticles);
+		//de.SetParticles(mCore->mDataStructureParticles.mParticles);
 	}
   // paint particle id's in input image
-  DrawParticles(&mDisplayOutput, inputimage);
-  // save it
-  std::ostringstream filename_oss;
-	filename_oss << mFileName.GetFullPath().mb_str(wxConvFile) << "-" << std::setw(8) << std::setfill('0') << mCore->GetStepCounter() << fileExtension;
-	cvSaveImage(filename_oss.str().c_str(), inputimage );
+  /*DrawParticles(&mDisplayOutput, inputimage);  // Makes main loop slow */
+
 }
 
 void THISCLASS::DrawParticles(Display *mDisplay, IplImage* mImage )

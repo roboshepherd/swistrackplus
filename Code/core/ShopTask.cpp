@@ -26,12 +26,14 @@ void THISCLASS::StepUpdate(long stepnum, int workercount){
   //  update step info, used also in  statistical analysis purpose
   mStepCount= stepnum;
   mWorkers = workercount;
-
-  // update urgency based on the worker count
+ // limit update frequency
+ if (!(mStepCount % URGENCY_UPDATE_STEP)) {
+  // update urgency based on the worker count and stepnum
   if(mWorkers == 0){
     mUrgency += DELTA_URGENCY_INC;
   } else {
-    mUrgency -= (DELTA_URGENCY_DEC * mWorkers);
+    mUrgency -= DELTA_URGENCY_DEC;
+    /* mUrgency -= (DELTA_URGENCY_DEC * mWorkers); */
   }
   // keep it within 0 to 1
 
@@ -40,5 +42,5 @@ void THISCLASS::StepUpdate(long stepnum, int workercount){
 
   // TEST later
   // else if (workerlimit > MAX_WORKER_LIMIT) {mUrgency -= mDeltaUrgency;}
-
+ }
 }

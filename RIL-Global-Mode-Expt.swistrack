@@ -47,9 +47,6 @@
     <component type="RILGlobalModeExpt">
       <enabledinterval value="1"/>
     </component>
-    <component type="OutputFramesImages">
-      <enabledinterval value="1"/>
-    </component>
   </components>
   <server>
     <port>3497</port>

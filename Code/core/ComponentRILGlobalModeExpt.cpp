@@ -356,12 +356,22 @@ void THISCLASS::InitLogFiles()
   }
 
   mTaskUrgencyWriter.InitDataFile(objtype, &ctx);
+  // log settings
+  std::string comment;
+  comment = wxString::Format(wxT("Init Task Urgency: %.3f, Delta Urgency(inc): %.3f,\
+   Delta Urgency(dec): %.3f"),INIT_URGENCY, DELTA_URGENCY_INC, DELTA_URGENCY_DEC);
+
+  mTaskUrgencyWriter.AppendComment(comment);
+
+  /* Any additional comments */
+  comment = wxString::Format(wxT("Task urgency updates linearly in every %d step"),\
+   URGENCY_UPDATE_STEP);
+  mTaskUrgencyWriter.AppendComment(comment);
 
   /* Create log file to save all tasks' worker count*/
   ctx.name = "WorkerCount";
   ctx.desc = "Task Workers in global broadcast mode";
-
-  mTaskWorkerWriter.InitDataFile(objtype, &ctx);;
+  mTaskWorkerWriter.InitDataFile(objtype, &ctx);
 
   /* Create log file to save all tasks' worker count*/
   objtype = "RobotActivity";
