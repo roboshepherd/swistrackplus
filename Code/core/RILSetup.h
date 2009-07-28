@@ -21,8 +21,8 @@
 #define INIT_URGENCY 0.5
 #define DELTA_URGENCY 0.01
 #define DELTA_URGENCY_INC 0.01
-#define DELTA_URGENCY_DEC 0.1
-#define URGENCY_UPDATE_STEP 30 // update every Nth step
+#define DELTA_URGENCY_DEC 0.01
+#define URGENCY_UPDATE_STEP 10 // update every Nth step
 
 #define INIT_MATERIAL_COUNT 10
 #define XY 2 // for task coordinates

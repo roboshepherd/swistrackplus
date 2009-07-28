@@ -695,7 +695,7 @@ wxThread::ExitCode THISCLASS::Thread::Entry() {
 	if(!PvCaptureQueueFrame(mComponent->mCameraHandle, &(mComponent->mCameraFrame), NULL))
     {
         //printf("waiting for the frame to be done...\n");
-        while(PvCaptureWaitForFrameDone(mComponent->mCameraHandle, &(mComponent->mCameraFrame), 300) == ePvErrTimeout)
+        while(PvCaptureWaitForFrameDone(mComponent->mCameraHandle, &(mComponent->mCameraFrame), 1000) == ePvErrTimeout)
         {    //printf("still waiting ...\n");
             ;
         }
