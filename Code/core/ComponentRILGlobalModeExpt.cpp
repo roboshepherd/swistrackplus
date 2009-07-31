@@ -305,9 +305,10 @@ void THISCLASS::UpdateShopTasks(int taskcount, int robotcount)
   if (p && q){
     for(int i=0; i< taskcount; i++){
 	    for(int j = 0; j < robotcount; j++){
-	      working = (p->at(j).mState > 100  ? true : false );
+	      working = (p->at(j).mState >= 100  ? true : false );
 	      if(!working) continue;
 	      task = (p->at(j).mState / 100) - 1; //decode task id
+	      task = (task < 0  ? 0 : task); // FIXME, redundant check
         workercount += (task == i ? 1 : 0 );
 	    }
 	    // update this shoptask
