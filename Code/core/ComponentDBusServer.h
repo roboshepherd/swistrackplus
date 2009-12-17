@@ -1,6 +1,7 @@
 #ifndef HEADER_ComponentDBusServer
 #define HEADER_ComponentDBusServer
 
+#include <dbus/dbus.h>
 #include <cv.h>
 #include "Component.h"
 
@@ -24,6 +25,8 @@ public:
 	}
 
 private:
+  DBusConnection *mDBusConn;
+  DBusError mDBusErr;
   IplImage *mBgImage;				//!< The image used by this component.
 	Display mDisplayOutput;				//!< The DisplayImage showing the output of this component.
 

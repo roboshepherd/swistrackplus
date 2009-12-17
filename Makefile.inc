@@ -39,3 +39,8 @@ CPPFLAGS_ADD       += -I/usr/local/include/wx
 # Components that depend on boost interprocess library
 CPPFLAGS_ADD       += -I/usr/local/include/boost
 LDLIBS_ADD         += -L/usr/local/lib -lboost_signals-mt
+
+# Components that depend on dbus-1 library
+CPPFLAGS_ADD       += -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include 
+LDLIBS_ADD         += -L/lib -ldbus-1
+

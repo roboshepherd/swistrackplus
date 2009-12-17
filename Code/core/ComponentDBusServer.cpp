@@ -28,9 +28,30 @@ void THISCLASS::OnReloadConfiguration() {
   if(mCore->mDataStructureImageGray.mImage){
         mBgImage = mCore->mDataStructureImageGray.mImage;
     }
+  // get DBus connection
+  dbus_error_init (&mDBusErr);
+  mDBusConn = dbus_bus_get (DBUS_BUS_SESSION, &mDBusErr);
+  if (!mDBusConn)
+  {
+      printf ("Failed to connect to the D-BUS daemon: %s", mDBusErr.message);
+      dbus_error_free (&mDBusErr);
+  }
+
 }
 
 void THISCLASS::OnStep() {
+
+  // send a DBus signal
+  DBusMessage *message;
+
+  message = dbus_message_new_signal ("/org/share/linux",
+                                     "org.share.linux",
+                                     "Customize");
+  /* Send the message */
+  dbus_connection_send (mDBusConn, message, NULL);
+  dbus_message_unref (message);
+
+
 
 	// Set the display
 	DisplayEditor de(&mDisplayOutput);

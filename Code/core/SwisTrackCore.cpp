@@ -68,6 +68,8 @@
 #include "ComponentRobotDeviceManager.h"
 #include "ComponentRILGlobalModeExpt.h"
 
+#include "ComponentDBusServer.h"
+
 THISCLASS::SwisTrackCore(wxString componentconfigurationfolder):
 		mAvailableComponents(), mDataStructures(), mSwisTrackCoreInterfaces(), mComponentConfigurationFolder(componentconfigurationfolder),
 		mComponentCategories(), mCommunicationInterface(0), mTrigger(new SwisTrackCoreTrigger(this)), mEventRecorder(new SwisTrackCoreEventRecorder(this)),
@@ -173,6 +175,7 @@ THISCLASS::SwisTrackCore(wxString componentconfigurationfolder):
   mAvailableComponents.push_back(new ComponentRobotDeviceManager(this));
   //mAvailableComponents.push_back(new ComponentRobotTaskAllocator(this));
   mAvailableComponents.push_back(new ComponentRILGlobalModeExpt(this));
+  mAvailableComponents.push_back(new ComponentDBusServer(this));
 
 	// Initialize the available components
 	tComponentList::iterator ita = mAvailableComponents.begin();
