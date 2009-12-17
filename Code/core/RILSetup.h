@@ -4,17 +4,17 @@
 #include "math.h"
 
 // Size
-#define MAXROBOT 8
+#define MAXROBOT 38
 
 // RIL robot id alias -- ids are same in SwisTracker
-#define EPUCK1246 "1"
-#define EPUCK1250 "2"
-#define EPUCK1253 "3"
-#define EPUCK1259 "4"
-#define EPUCK1260 "5"
-#define EPUCK1265 "6"
-#define EPUCK1271 "7"
-#define EPUCK1302 "8"
+//#define EPUCK1246 "1"
+//#define EPUCK1250 "2"
+//#define EPUCK1253 "3"
+//#define EPUCK1259 "4"
+//#define EPUCK1260 "5"
+//#define EPUCK1265 "6"
+//#define EPUCK1271 "7"
+//#define EPUCK1302 "8"
 
 //RIL and AFM params
 #define MAXSHOPTASK 3

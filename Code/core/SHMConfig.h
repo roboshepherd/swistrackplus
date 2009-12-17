@@ -19,7 +19,7 @@ using namespace boost::interprocess;
 #define PEERS_SHM "LocalPeerList"
 #define TASK_ESTIMATE_SHM "LocalTaskEstimates"
 
-#define SHM_COUNT 8
+#define SHM_COUNT 38
 
 #include "RILSetup.h"
 

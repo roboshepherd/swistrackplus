@@ -28,7 +28,7 @@
       <parameter name="AreaBool" value="true"/>
       <parameter name="CompactnessBool" value="true"/>
       <parameter name="MaxArea" value="10000"/>
-      <parameter name="MaxNumber" value="8"/>
+      <parameter name="MaxNumber" value="40"/>
       <parameter name="MinArea" value="3000"/>
       <parameter name="MinCompactness" value="0.530000"/>
     </component>
@@ -45,7 +45,7 @@
       <enabledinterval value="1"/>
     </component>
     <component type="RILGlobalModeExpt">
-      <enabledinterval value="1"/>
+      <enabledinterval value="0"/>
     </component>
   </components>
   <server>
