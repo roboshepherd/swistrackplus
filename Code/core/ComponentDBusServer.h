@@ -5,6 +5,12 @@
 #include <cv.h>
 #include "Component.h"
 
+#include <wx/string.h>
+// D-BUs Defs
+#define DBUS_IFACE "uk.ac.newport.ril.MultiRobotTracker"
+#define DBUS_SIGNAL_POSE "PoseSignal"
+#define DBUS_PATH_BASE "/robot"
+
 //! A component that broadcast message over DBus
 class ComponentDBusServer: public Component {
 
@@ -27,6 +33,8 @@ public:
 private:
   DBusConnection *mDBusConn;
   DBusError mDBusErr;
+  DBusMessage *mDBusMsg;
+  DBusMessageIter mDBusArgs;
   IplImage *mBgImage;				//!< The image used by this component.
 	Display mDisplayOutput;				//!< The DisplayImage showing the output of this component.
 

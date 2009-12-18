@@ -79,6 +79,8 @@ void THISCLASS::OnStep() {
 	    de.SetParticles(mCore->mDataStructureParticles.mParticles);
 		de.SetMainImage(mBgImage);
 	}
+
+	 printf("End of RDM step\n");
 }
 
 void THISCLASS::OnStepCleanup() {
