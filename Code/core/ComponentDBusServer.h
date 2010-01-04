@@ -7,7 +7,7 @@
 
 #include <wx/string.h>
 // D-BUs Defs
-#define DBUS_IFACE "uk.ac.newport.ril.MultiRobotTracker"
+#define DBUS_IFACE "uk.ac.newport.ril.SwisTrack"
 #define DBUS_SIGNAL_POSE "PoseSignal"
 #define DBUS_PATH_BASE "/robot"
 
@@ -35,6 +35,7 @@ private:
   DBusError mDBusErr;
   DBusMessage *mDBusMsg;
   DBusMessageIter mDBusArgs;
+  wxString mBusPath;
   IplImage *mBgImage;				//!< The image used by this component.
 	Display mDisplayOutput;				//!< The DisplayImage showing the output of this component.
 
