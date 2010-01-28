@@ -21,8 +21,7 @@ THISCLASS::ComponentDBusServer(SwisTrackCore *stc):
 
 	// Data structure relations
 	mCategory = &(mCore->mCategoryOutput);
-	AddDataStructureRead(&(mCore->mDataStructureRobotDevices));
-	AddDataStructureWrite(&(mCore->mDataStructureShopTasks));
+	AddDataStructureRead(&(mCore->mDataStructureParticles));
 	AddDisplay(&mDisplayOutput);
 
 	// Read the XML configuration file

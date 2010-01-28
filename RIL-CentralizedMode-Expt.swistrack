@@ -41,11 +41,8 @@
     <component type="OutputParticles">
       <enabledinterval value="1"/>
     </component>
-    <component type="RobotDeviceManager">
-      <enabledinterval value="1"/>
-    </component>
     <component type="DBusServer">
-      <enabledinterval value="1"/>
+      <enabledinterval value="2"/>
     </component>
   </components>
   <server>
