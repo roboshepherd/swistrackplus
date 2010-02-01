@@ -7,6 +7,8 @@
 #include <vector>
 #include <algorithm>
 
+
+
 #include "Component.h"
 #include "DisplayEditor.h"
 
@@ -52,6 +54,7 @@ private:
   DBusError mDBusErr;
   DBusMessage *mDBusMsg;
   DBusMessageIter mDBusArgs;
+  DBusMessageIter mDBusArray;
   wxString mBusPath;
   std::vector<int> mTaskNeighbors;
   std::vector<int> mRobotPeers;

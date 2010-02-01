@@ -6,12 +6,14 @@
 //#define MC_DS_ROBOTDEVICES mCore->mDataStructureRobotDevices.mRobotDevices
 #define  MC_DS_PARTICLES mCore->mDataStructureParticles.mParticles
 
+
 THISCLASS::ComponentDBusServer(SwisTrackCore *stc):
 		Component(stc, wxT("DBusServer")),
 		mDBusConn(0),
     mDBusErr(),
     mDBusMsg(0),
     mDBusArgs(),
+    mDBusArray(),
     mBusPath(),
     mTaskNeighbors(),
     mRobotPeers(),
@@ -91,13 +93,28 @@ void THISCLASS::EmitRobotPeerList()
       mDBusMsg = dbus_message_new_signal (mBusPath, DBUS_IFACE, DBUS_SIGNAL_PEERS);
       if (mDBusMsg == NULL) { fprintf(stderr, "DBus Message Null\n"); }
 
+
+      // Init iter for append
       dbus_message_iter_init_append(mDBusMsg, &mDBusArgs);
-      for(unsigned i =0; i < mRobotPeers.size();  i++) {
-        int val = mRobotPeers.at(i);
-        if (!dbus_message_iter_append_basic(&mDBusArgs, DBUS_TYPE_INT32, &val)) {
+
+      // apend robotid
+      if (!dbus_message_iter_append_basic(&mDBusArgs, DBUS_TYPE_INT32, &myID)) {
           fprintf(stderr, "DBus Out Of Memory for x!\n");
         }
+      // append peers
+      wxChar type_sig[2] = { DBUS_TYPE_INT32, '\0' };
+      if(!dbus_message_iter_open_container(&mDBusArgs, DBUS_TYPE_ARRAY,\
+       type_sig, &mDBusArray)){
+          fprintf(stderr, "DBus can't open iter container!\n");
       }
+      for(unsigned i =0; i < mRobotPeers.size();  i++) {
+        int val = mRobotPeers.at(i);
+        if (!dbus_message_iter_append_basic(&mDBusArray, DBUS_TYPE_INT32, &val)) {
+          fprintf(stderr, "DBus Out Of Memory for adding value!\n");
+        }
+      }
+      dbus_message_iter_close_container(&mDBusArgs, &mDBusArray);
+
       // emit signal
       dbus_connection_send (mDBusConn, mDBusMsg, NULL);
     }  else { //prepare/send dbus msg end
@@ -138,13 +155,27 @@ void THISCLASS::EmitTaskNeighborList()
       mDBusMsg = dbus_message_new_signal (mBusPath, DBUS_IFACE, DBUS_SIGNAL_TASK);
       if (mDBusMsg == NULL) { fprintf(stderr, "DBus Message Null\n"); }
 
+      // Init iter for append
       dbus_message_iter_init_append(mDBusMsg, &mDBusArgs);
-      for(unsigned i =0; i < mTaskNeighbors.size();  i++) {
-        int val = mTaskNeighbors.at(i);
-        if (!dbus_message_iter_append_basic(&mDBusArgs, DBUS_TYPE_INT32, &val)) {
+
+      // apend taskid
+      if (!dbus_message_iter_append_basic(&mDBusArgs, DBUS_TYPE_INT32, &taskid)) {
           fprintf(stderr, "DBus Out Of Memory for x!\n");
         }
+      // append neighbors
+      wxChar type_sig[2] = { DBUS_TYPE_INT32, '\0' };
+      if(!dbus_message_iter_open_container(&mDBusArgs, DBUS_TYPE_ARRAY,\
+       type_sig, &mDBusArray)){
+          fprintf(stderr, "DBus can't open iter container!\n");
       }
+      for(unsigned i =0; i < mTaskNeighbors.size();  i++) {
+        int val = mTaskNeighbors.at(i);
+        if (!dbus_message_iter_append_basic(&mDBusArray, DBUS_TYPE_INT32, &val)) {
+          fprintf(stderr, "DBus Out Of Memory for adding value!\n");
+        }
+      }
+      dbus_message_iter_close_container(&mDBusArgs, &mDBusArray);
+
       // emit signal
       dbus_connection_send (mDBusConn, mDBusMsg, NULL);
     }  else { //prepare/send dbus msg end
