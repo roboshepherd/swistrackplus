@@ -17,6 +17,7 @@ THISCLASS::ComponentDBusServer(SwisTrackCore *stc):
     mBusPath(),
     mTaskNeighbors(),
     mRobotPeers(),
+    mStepCount(0),
 		mBgImage(0),
 		mDisplayOutput(wxT("Output"), wxT("After DBusServer worked")) {
 
@@ -223,7 +224,8 @@ void THISCLASS::EmitRobotPoses()
 }
 
 void THISCLASS::OnStep() {
-  printf("\n ---------------- DBUS Server Step Start ------------\n");
+  mStepCount++;
+  printf("\n ---------------- DBUS Server Step Start %d ------------\n", mStepCount);
 
 
   //DataStructureRobotDevices::tRobotDeviceVector *r = MC_DS_ROBOTDEVICES;
@@ -234,7 +236,10 @@ void THISCLASS::OnStep() {
 	} else {
       EmitRobotPoses();
       EmitTaskNeighborList();
-      EmitRobotPeerList();
+      // Emit at reduce freq
+      if(!(mStepCount % SIGNAL_REDUCER_MOD)) {
+        EmitRobotPeerList();
+      }
   }
 
 

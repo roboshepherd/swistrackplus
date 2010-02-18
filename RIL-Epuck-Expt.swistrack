@@ -44,6 +44,10 @@
     <component type="DBusServer">
       <enabledinterval value="2"/>
     </component>
+    <component type="OutputFramesImages">
+      <enabledinterval value="4"/>
+      <parameter name="FilePrefix" value="2010-02-17-1-"/>
+    </component>
   </components>
   <server>
     <port>3497</port>

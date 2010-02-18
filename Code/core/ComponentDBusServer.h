@@ -13,8 +13,8 @@
 #include "DisplayEditor.h"
 
 #include "RILObjects.h" // for task locations
-#define TASK_NEIGHBOR_RADIUS 500 // pixel
-#define ROBOT_PEER_RADIUS 300
+#define TASK_NEIGHBOR_RADIUS 1000 // pixel
+#define ROBOT_PEER_RADIUS 1000
 // D-BUs Defs
 #define DBUS_IFACE "uk.ac.newport.ril.SwisTrack"
 #define DBUS_SIGNAL_POSE "PoseSignal"
@@ -23,6 +23,7 @@
 #define DBUS_TASK_PATH_BASE "/task"
 #define DBUS_SIGNAL_PEERS "RobotPeers"
 
+# define SIGNAL_REDUCER_MOD 5
 
 //! A component that broadcast message over DBus
 class ComponentDBusServer: public Component {
@@ -58,6 +59,7 @@ private:
   wxString mBusPath;
   std::vector<int> mTaskNeighbors;
   std::vector<int> mRobotPeers;
+  int mStepCount;
   IplImage *mBgImage;				//!< The image used by this component.
 	Display mDisplayOutput;				//!< The DisplayImage showing the output of this component.
 

@@ -24,7 +24,7 @@ THISCLASS::~ComponentOutputFileM4V() {
 }
 
 void THISCLASS::OnStart() {
-	wxString filename_string = GetConfigurationString(wxT("FileName"), wxT(""));
+	wxString filename_string = GetConfigurationString(wxT("FileName"), wxT("output.mp4"));
 	mFileName = mCore->GetRunFileName(filename_string);
 	mFrameRate = GetConfigurationInt(wxT("FrameRate"), 15);
 
@@ -56,6 +56,7 @@ void THISCLASS::OnReloadConfiguration() {
 void THISCLASS::OnStep() {
 	// Get the input image
 	IplImage* inputimage = 0;
+	inputimage = mCore->mDataStructureImageGray.mImage;
 	if (mInputChannel == cInputChannel_Grayscale) {
 		inputimage = mCore->mDataStructureImageGray.mImage;
 	} else if (mInputChannel == cInputChannel_Color) {

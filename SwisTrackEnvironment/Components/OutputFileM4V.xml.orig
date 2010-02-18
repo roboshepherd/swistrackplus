@@ -6,6 +6,11 @@
 	<displayimage>Output</displayimage>
 
 	<configuration>
+		<parameter type="outputfile">
+			<name>FileName</name>
+			<label>M4V File</label>
+			<reloadable>false</reloadable>
+		</parameter>
 		<parameter type="integer">
 			<name>FrameRate</name>
 			<label>Frame Rate</label>

@@ -17,7 +17,7 @@
 //#define EPUCK1302 "8"
 
 //RIL and AFM params
-#define MAXSHOPTASK 3
+#define MAXSHOPTASK 4
 #define INIT_URGENCY 0.5
 #define DELTA_URGENCY 0.01
 #define DELTA_URGENCY_INC 0.01

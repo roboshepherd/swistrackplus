@@ -67,6 +67,10 @@ void THISCLASS::OnStep() {
 		AddError(wxT("No image on selected input."));
 		return;
 	}
+
+	  // paint particle id's in input image
+  DrawParticles(&mDisplayOutput, inputimage);  // Makes main loop slow
+
 	char *fileExtension;
 	switch (mFileType) {
 	case 0:
@@ -92,10 +96,9 @@ void THISCLASS::OnStep() {
 	DisplayEditor de(&mDisplayOutput);
 	if (de.IsActive()) {
 		de.SetMainImage(inputimage);
-		//de.SetParticles(mCore->mDataStructureParticles.mParticles);
+		de.SetParticles(mCore->mDataStructureParticles.mParticles);
 	}
-  // paint particle id's in input image
-  /*DrawParticles(&mDisplayOutput, inputimage);  // Makes main loop slow */
+
 
 }
 
@@ -113,8 +116,8 @@ void THISCLASS::DrawParticles(Display *mDisplay, IplImage* mImage )
 		float s = sinf(it->mOrientation) * 8; //sinf(it->mOrientation/57.29577951)*20;
 		cvLine(mImage, cvPoint(x, y), cvPoint(x + (int)floorf(c + 0.5), y + (int)floorf(s + 0.5)), cvScalar(192, 0, 0), 1);
 
-//		wxString label = wxString::Format(wxT("%d [%.0f,%.0f,%.2f]"),\
-//		 it->mID, it->mCenter.x, it->mCenter.y, it->mOrientation);
+		//wxString label = wxString::Format(wxT("%d [%.0f,%.0f,%.2f]"),\
+		 //it->mID, it->mCenter.x, it->mCenter.y, it->mOrientation);
     wxString label = wxString::Format(wxT("%d"), it->mID);
 		cvPutText(mImage, label.mb_str(wxConvISO8859_1), cvPoint(x + 35, y - 35 ), &mFontMain, cvScalar(0, 0, 0));
 		it++;
