@@ -235,11 +235,11 @@ void THISCLASS::OnStep() {
     return;
 	} else {
       EmitRobotPoses();
-      //EmitTaskNeighborList();
+      EmitTaskNeighborList();
       // Emit at reduce freq
-      //if(!(mStepCount % SIGNAL_REDUCER_MOD)) {
-        //EmitRobotPeerList();
-        //}
+      if(!(mStepCount % SIGNAL_REDUCER_MOD)) {
+        EmitRobotPeerList();
+        }
   }
 
 	// Set the display

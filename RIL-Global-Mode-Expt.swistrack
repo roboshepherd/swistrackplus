@@ -34,7 +34,7 @@
     </component>
     <component type="IDReaderRing">
       <enabledinterval value="1"/>
-      <parameter name="ObjectListFileName" value="/home/newport-ril/swisTrack/swistrack/code/Make/Components/robotlist-20series.xml"/>
+      <parameter name="ObjectListFileName" value="/home/newport-ril/swisTrack/swistrack/code/Make/Components/robotlist-15series.xml"/>
       <parameter name="RingRadiusInner" value="16.000000"/>
       <parameter name="RingRadiusOuter" value="39.000000"/>
     </component>

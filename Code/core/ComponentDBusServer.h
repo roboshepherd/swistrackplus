@@ -23,7 +23,7 @@
 #define DBUS_TASK_PATH_BASE "/task"
 #define DBUS_SIGNAL_PEERS "RobotPeers"
 
-# define SIGNAL_REDUCER_MOD 5
+# define SIGNAL_REDUCER_MOD 2
 
 //! A component that broadcast message over DBus
 class ComponentDBusServer: public Component {

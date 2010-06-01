@@ -3,10 +3,10 @@
   <components>
     <component type="InputCameraGigE">
       <enabledinterval value="1"/>
-      <parameter name="AOIOffset.x" value="636"/>
+      <parameter name="AOIOffset.x" value="0"/>
       <parameter name="AOIOffset.y" value="0"/>
-      <parameter name="AOISize.x" value="2400"/>
-      <parameter name="AOISize.y" value="2144"/>
+      <parameter name="AOISize.x" value="4872"/>
+      <parameter name="AOISize.y" value="3248"/>
       <parameter name="AnalogGain" value="3"/>
       <parameter name="Color" value="false"/>
       <parameter name="ExposureMode" value="0"/>
@@ -28,13 +28,13 @@
       <parameter name="AreaBool" value="true"/>
       <parameter name="CompactnessBool" value="true"/>
       <parameter name="MaxArea" value="10000"/>
-      <parameter name="MaxNumber" value="40"/>
+      <parameter name="MaxNumber" value="45"/>
       <parameter name="MinArea" value="3000"/>
       <parameter name="MinCompactness" value="0.530000"/>
     </component>
     <component type="IDReaderRing">
       <enabledinterval value="1"/>
-      <parameter name="ObjectListFileName" value="/home/newport-ril/swisTrack/swistrack/code/Make/Components/robotlist-20series.xml"/>
+      <parameter name="ObjectListFileName" value="/home/newport-ril/afm-global-expt/swistrackplus/SwisTrackEnvironment/Components/robotlist-20series.xml"/>
       <parameter name="RingRadiusInner" value="16.000000"/>
       <parameter name="RingRadiusOuter" value="39.000000"/>
     </component>
@@ -45,8 +45,8 @@
       <enabledinterval value="2"/>
     </component>
     <component type="OutputFramesImages">
-      <enabledinterval value="4"/>
-      <parameter name="FilePrefix" value="2010-02-17-1-"/>
+      <enabledinterval value="0"/>
+      <parameter name="FilePrefix" value="2010-04-13-1-"/>
     </component>
   </components>
   <server>
