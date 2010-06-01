@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<objectlist>
+    <objects>
+        <object id="43">
+            <barcode>
+                <chips length="15" symbol="0"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="42">
+            <barcode>
+                <chips length="15" symbol="30611"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="41">
+            <barcode>
+                <chips length="15" symbol="30507"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="40">
+            <barcode>
+                <chips length="15" symbol="29427"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="39">
+            <barcode>
+                <chips length="15" symbol="29259"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="38">
+            <barcode>
+                <chips length="15" symbol="28539"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="37">
+            <barcode>
+                <chips length="15" symbol="28095"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="36">
+            <barcode>
+                <chips length="15" symbol="26033"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="35">
+            <barcode>
+                <chips length="15" symbol="25824"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="34">
+            <barcode>
+                <chips length="15" symbol="25377"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="33">
+            <barcode>
+                <chips length="15" symbol="24944"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="32">
+            <barcode>
+                <chips length="15" symbol="24671"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="31">
+            <barcode>
+                <chips length="15" symbol="23365"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="30">
+            <barcode>
+                <chips length="15" symbol="23022"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="29">
+            <barcode>
+                <chips length="15" symbol="22742"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="28">
+            <barcode>
+                <chips length="15" symbol="21873"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+        <object id="27">
+            <barcode>
+                <chips length="15" symbol="21494"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="26">
+            <barcode>
+                <chips length="15" symbol="21417"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="25">
+            <barcode>
+                <chips length="15" symbol="21328"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="24">
+            <barcode>
+                <chips length="15" symbol="20485"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="23">
+            <barcode>
+                <chips length="15" symbol="19717"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="22">
+            <barcode>
+                <chips length="15" symbol="19683"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="21">
+            <barcode>
+                <chips length="15" symbol="19026"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="20">
+            <barcode>
+                <chips length="15" symbol="15520"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="19">
+            <barcode>
+                <chips length="15" symbol="14971"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="18">
+            <barcode>
+                <chips length="15" symbol="14739"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="17">
+            <barcode>
+                <chips length="15" symbol="13923"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="16">
+            <barcode>
+                <chips length="15" symbol="12647"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="15">
+            <barcode>
+                <chips length="15" symbol="11717"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="14">
+            <barcode>
+                <chips length="15" symbol="10790"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="13">
+            <barcode>
+                <chips length="15" symbol="9689"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="12">
+            <barcode>
+                <chips length="15" symbol="9228"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="11">
+            <barcode>
+                <chips length="15" symbol="9067"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="10">
+            <barcode>
+                <chips length="15" symbol="8506"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="9">
+            <barcode>
+                <chips length="15" symbol="8431"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="8">
+            <barcode>
+                <chips length="15" symbol="6644"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="7">
+            <barcode>
+                <chips length="15" symbol="4602"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="6">
+            <barcode>
+                <chips length="15" symbol="4095"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="5">
+            <barcode>
+                <chips length="15" symbol="3932"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="4">
+            <barcode>
+                <chips length="15" symbol="3585"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="3">
+            <barcode>
+                <chips length="15" symbol="2494"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="2">
+            <barcode>
+                <chips length="15" symbol="1779"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+        <object id="1">
+            <barcode>
+                <chips length="15" symbol="32221"/>
+                <angle>0</angle>
+            </barcode>
+        </object>
+
+     </objects>
+</objectlist>
+

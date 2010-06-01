@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<swistrackcomponent>
+	<friendlyname>Output Frames to a image File</friendlyname>
+	<description>testing....</description>
+	<url>http://en.wikibooks.org/wiki/SwisTrack/Components/OutputFile</url>
+	<displayimage>Output</displayimage>
+
+	<configuration>
+		<parameter type="string">
+			<name>FilePrefix</name>
+			<label>File prefix</label>
+			<default>2010-02-15</default>
+			<reloadable>false</reloadable>
+		</parameter>
+		<parameter type="string">
+			<name>FileType</name>
+			<label>file ext</label>
+			<default>jpeg</default>
+			<reloadable>false</reloadable>
+		</parameter>
+		<parameter type="integer">
+			<name>InputImage</name>
+			<label>input</label>
+			<default>0</default>
+			<reloadable>false</reloadable>
+		</parameter>
+	</configuration>
+</swistrackcomponent>

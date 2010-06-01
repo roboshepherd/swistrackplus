@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<swistrackcomponent>
+	<friendlyname>Input Static Image from A File</friendlyname>
+	<description>Reads an image from a file.</description>
+	<url>http://en.wikibooks.org/wiki/SwisTrack/Components/InputFileImage</url>
+	<displayimage>Output</displayimage>
+
+	<configuration>
+		<parameter type="file">
+			<name>File</name>
+			<label>Image file</label>
+			<reloadable>false</reloadable>
+		</parameter>
+	</configuration>
+</swistrackcomponent>
